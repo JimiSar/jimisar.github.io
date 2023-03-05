@@ -43,8 +43,10 @@
         padding: 3rem;
       }
       .post img {
-        max-width: 100%;
+        width: 80%;
+        height: auto;
       }
+
       .post {
         margin-bottom: 3rem;
         padding: 1rem;
@@ -74,9 +76,66 @@
         font-family: "Times New Roman", Times, serif;
         font-weight: bold;
       }
+      h4 {
+        color: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        font-size: x-large;
+      }
+      /* Dropdown Button */
+      .dropbtn {
+        background-color: rgb(19, 165, 190);
+        color: white;
+        padding: 20px;
+        font-size: 20px;
+        border: none;
+      }
+
+      .dropdown {
+        position: fixed;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: fixed;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(36, 35, 35, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: rgb(0, 0, 0);
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: rgb(19, 165, 190);
+      }
     </style>
   </head>
   <body>
+    <div class="dropdown">
+      <button class="dropbtn">Navigointi</button>
+      <div class="dropdown-content">
+        <a href="#Harrastus">Harrastus</a>
+        <a href="#Soittimet">Soittimet</a>
+        <a href="#Bändit">Bändit</a>
+        <a href="#Video">Video</a>
+        <a href="#Musiikkityylit">Musiikkityylit</a>
+        <a href="#Yhteystiedot">Yhteystiedot</a>
+      </div>
+    </div>
     <header>
       <div class="title">
         <h1 class="text-center">Rumpuharrastukseni - Jimi Saranen</h1>
@@ -86,6 +145,7 @@
       <div class="post">
         <div class="row">
           <div class="col-lg-6">
+            <div id="Harrastus"></div>
             <h2>Harrastus</h2>
             <p>
               Olen Jimi Saranen, 23-vuotias toisen vuoden
@@ -121,15 +181,26 @@
       <div class="post">
         <div class="row">
           <div class="col-lg-6">
+            <div id="Soittimet"></div>
             <h2>Soittimet</h2>
-            <p>Nykyinen rumpusetti (vasemmalla):</p>
+            <h4>Nykyinen rumpusetti:</h4>
             <p>
               Pearl Vision VSX 10", 12", 14" & 22" -shell setti, Ludvig Acrolite
               Black Galaxy 14" -virvelirumpu Centent LAD 16", 17" & 18"
               crash-symbaalit, 20" ride-symbaali, 14" hi-hat sekä 16"
               china-symbaali.
             </p>
-            <p>Aikaisempi rumpusetti (oikealla):</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="pienikuva2.jpg" alt="kuva" width="250" height="300" />
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Soittimet</h2>
+            <h4>Aikaisempi rumpusetti:</h4>
             <p>
               Pearl Exports 12", 13", 16" & 22" -shell setti, Pearl Exports 14"
               -virvelirumpu, Paiste PST5 16" & 18" crash-symbaalit, 20"
@@ -137,7 +208,6 @@
             </p>
           </div>
           <div class="col-lg-6">
-            <img src="pienikuva2.jpg" alt="kuva" width="250" height="300" />
             <img src="pienikuva4.jpg" alt="kuva" width="300" height="300" />
           </div>
         </div>
@@ -145,6 +215,7 @@
       <div class="post">
         <div class="row">
           <div class="col-lg-6">
+            <div id="Bändit"></div>
             <h2>Bändit</h2>
             <p>
               Vuosien varrella on tullut soiteltua rumpalina useammassakin
@@ -181,6 +252,7 @@
         </div>
       </div>
       <div class="post">
+        <div id="Video"></div>
         <h2>Nurnas Rottarallissa 2017</h2>
         <div class="video">
           <iframe
@@ -198,6 +270,7 @@
       <div class="post">
         <div class="row">
           <div class="col-lg-6">
+            <div id="Musiikkityylit"></div>
             <h2>Musiikkityylit</h2>
             <p>
               Pienenä kuuntelin yleensä sitä mitä isommat veljet tai isä
@@ -227,6 +300,7 @@
         </div>
       </div>
     </div>
+    <div id="Yhteystiedot"></div>
     <div class="yhteystiedot">
       <h3>Yhteystiedot</h3>
       <p>jimisar@uef.fi</p>
